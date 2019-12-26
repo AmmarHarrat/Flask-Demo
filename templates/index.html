@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		First Application with flask
+	</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+
+<div class="container">
+  
+  <form action="{{ url_for('predict')}}" method="post">
+    <div class="form-group">
+      <h3><i><label for="email">Article description for Classification</label></i></h3>
+      <input type="text" class="form-control" id="name" placeholder="Text for Classification" name="name"required="required">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Predict</button>
+  </form>
+</div>
+
+
+<h1><span class="badge badge-secondary">{{ prediction_text }}</span></h1>
+
+</body>
+</html>
